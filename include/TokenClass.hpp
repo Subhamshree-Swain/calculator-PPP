@@ -4,11 +4,13 @@ public:
     double value;
 };
 
-class TokenClass{
+class TokenStream{
 public:
     void putback(Token t);
     Token get();
 private:
     bool full = false;
-    Token buffer;
+   Token buffer;
 };
+
+extern TokenStream ts;
