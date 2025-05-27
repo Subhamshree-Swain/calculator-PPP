@@ -1,6 +1,12 @@
 [
 {
   "directory": "/home/subhamshree/projects/Learning_Stuff/Principles_and_practice_using_C++/UNIT_1/calculator-PPP/build",
+  "command": "/usr/bin/c++  -I/home/subhamshree/projects/Learning_Stuff/Principles_and_practice_using_C++/UNIT_1/calculator-PPP/include -std=gnu++17 -o CMakeFiles/main.dir/src/CalculatorFunction.cpp.o -c /home/subhamshree/projects/Learning_Stuff/Principles_and_practice_using_C++/UNIT_1/calculator-PPP/src/CalculatorFunction.cpp",
+  "file": "/home/subhamshree/projects/Learning_Stuff/Principles_and_practice_using_C++/UNIT_1/calculator-PPP/src/CalculatorFunction.cpp",
+  "output": "CMakeFiles/main.dir/src/CalculatorFunction.cpp.o"
+},
+{
+  "directory": "/home/subhamshree/projects/Learning_Stuff/Principles_and_practice_using_C++/UNIT_1/calculator-PPP/build",
   "command": "/usr/bin/c++  -I/home/subhamshree/projects/Learning_Stuff/Principles_and_practice_using_C++/UNIT_1/calculator-PPP/include -std=gnu++17 -o CMakeFiles/main.dir/src/TokenClass.cpp.o -c /home/subhamshree/projects/Learning_Stuff/Principles_and_practice_using_C++/UNIT_1/calculator-PPP/src/TokenClass.cpp",
   "file": "/home/subhamshree/projects/Learning_Stuff/Principles_and_practice_using_C++/UNIT_1/calculator-PPP/src/TokenClass.cpp",
   "output": "CMakeFiles/main.dir/src/TokenClass.cpp.o"

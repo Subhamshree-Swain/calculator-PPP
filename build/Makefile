@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/CalculatorFunction.o: src/CalculatorFunction.cpp.o
+.PHONY : src/CalculatorFunction.o
+
+# target to build an object file
+src/CalculatorFunction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CalculatorFunction.cpp.o
+.PHONY : src/CalculatorFunction.cpp.o
+
+src/CalculatorFunction.i: src/CalculatorFunction.cpp.i
+.PHONY : src/CalculatorFunction.i
+
+# target to preprocess a source file
+src/CalculatorFunction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CalculatorFunction.cpp.i
+.PHONY : src/CalculatorFunction.cpp.i
+
+src/CalculatorFunction.s: src/CalculatorFunction.cpp.s
+.PHONY : src/CalculatorFunction.s
+
+# target to generate assembly for a file
+src/CalculatorFunction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/CalculatorFunction.cpp.s
+.PHONY : src/CalculatorFunction.cpp.s
+
 src/TokenClass.o: src/TokenClass.cpp.o
 .PHONY : src/TokenClass.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... src/CalculatorFunction.o"
+	@echo "... src/CalculatorFunction.i"
+	@echo "... src/CalculatorFunction.s"
 	@echo "... src/TokenClass.o"
 	@echo "... src/TokenClass.i"
 	@echo "... src/TokenClass.s"

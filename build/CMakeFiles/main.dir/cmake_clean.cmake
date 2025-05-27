@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/main.dir/src/CalculatorFunction.cpp.o"
+  "CMakeFiles/main.dir/src/CalculatorFunction.cpp.o.d"
   "CMakeFiles/main.dir/src/TokenClass.cpp.o"
   "CMakeFiles/main.dir/src/TokenClass.cpp.o.d"
   "CMakeFiles/main.dir/src/main.cpp.o"
