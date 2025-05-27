@@ -1,6 +1,9 @@
+#include <string>
+using namespace std;
+
 class Token{
 public:
-    char kind;
+    string kind;
     double value;
 };
 
