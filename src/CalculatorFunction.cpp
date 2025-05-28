@@ -98,11 +98,11 @@ double Expression(){
     while(true){
         switch(t.kind){
             case '+':
-                expr += Primary();
+                expr += Term();
                 t = ts.get();
                 break;
             case '-':
-                expr -= Primary();
+                expr -= Term();
                 t = ts.get();
                 break;
             default:
