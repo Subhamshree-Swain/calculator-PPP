@@ -11,7 +11,7 @@ int main(){
             Token t = ts.get();
             if(t.kind == 'q') break;
             if(t.kind == ';'){
-                cout << "==> " << val << '\n';
+                cout << "==> " << val << "\n\n";
             }
             else{
                 ts.putback(t);
