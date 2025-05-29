@@ -1,3 +1,5 @@
+#pragma once
+
 class Token{
 public:
     char kind;
@@ -12,5 +14,3 @@ private:
     bool full = false;
    Token buffer;
 };
-
-extern TokenStream ts;

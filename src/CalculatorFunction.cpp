@@ -1,10 +1,10 @@
 #define PI 3.1415
 #define e 2.71
 
-
 #include "CalculatorFunction.hpp"
 #include "TokenClass.hpp"
 #include "ErrorClass.hpp"
+#include "globals.hpp"
 using namespace std;
 
 double Primary(){
@@ -31,7 +31,13 @@ double Primary(){
                 return s;
             }
         case '8':
-            return t.value;
+            {
+                if(neg){
+                    neg = false;
+                    return -t.value;
+                }
+                return t.value;
+            }
         case 'p':
             {
                 t = ts.get();
@@ -43,6 +49,12 @@ double Primary(){
             }
         case 'e':
             return e;
+        case '-':
+            {
+                neg = true;
+                double x = Expression(); 
+                return x;
+            }
         default:
             throw Error("Primary missing");
             return -1;

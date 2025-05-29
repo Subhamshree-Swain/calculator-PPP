@@ -2,6 +2,8 @@
 #include "TokenClass.hpp"
 #include "ErrorClass.hpp"
 #include "CalculatorFunction.hpp"
+#include "globals.hpp"
+
 using namespace std;
 
 int main(){

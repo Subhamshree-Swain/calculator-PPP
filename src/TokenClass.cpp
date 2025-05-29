@@ -54,5 +54,3 @@ Token TokenStream::get(){
             throw Error("Token get() function failed");
     }
 }
-
-TokenStream ts;
