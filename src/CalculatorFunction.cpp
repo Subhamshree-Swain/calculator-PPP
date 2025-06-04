@@ -1,10 +1,11 @@
 #define PI 3.1415
 #define e 2.71
 
-
 #include "CalculatorFunction.hpp"
 #include "TokenClass.hpp"
 #include "ErrorClass.hpp"
+#include "globals.hpp"
+#include "utility.hpp"
 using namespace std;
 
 double Primary(){
@@ -30,7 +31,7 @@ double Primary(){
                 }
                 return s;
             }
-        case '8':
+        case TokenNumber:
             return t.value;
         case 'p':
             {
@@ -43,26 +44,46 @@ double Primary(){
             }
         case 'e':
             return e;
+        case '-':
+            return -Primary();
         default:
             throw Error("Primary missing");
             return -1;
     }
 }
 
+double Postfix(){
+    double fact = Primary();
+    Token t = ts.get();
+    while(true){
+        switch(t.kind){
+            case '!':
+                {
+                    fact = factorial(fact);
+                    t = ts.get();
+                    break;
+                }
+            default:
+                ts.putback(t);
+                return fact;
+        }
+    }
+}
+
 double Term(){
-    double term = Primary();
+    double term = Postfix();
     Token t = ts.get();
     while(true){
         switch(t.kind){
             case '*':
                 {
-                    term *= Primary();
+                    term *= Postfix();
                     t = ts.get();
                     break;
                 }
             case '/':
                 {
-                    double c = Primary();
+                    double c = Postfix();
                     if(c == 0){
                         throw Error("0 division");
                         return -1;
@@ -73,7 +94,7 @@ double Term(){
                 }
             case '%':
                 {
-                    double n = Primary();
+                    double n = Postfix();
                     if(term == static_cast<int>(term) ||
                        n == static_cast<int>(n)){
                         term = static_cast<int>(term)%static_cast<int>(n);

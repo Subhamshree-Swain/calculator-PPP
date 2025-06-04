@@ -1,3 +1,5 @@
+#pragma once
+
 class Token{
 public:
     char kind;
@@ -8,9 +10,8 @@ class TokenStream{
 public:
     void putback(Token t);
     Token get();
+    void ignoreTill(char c);
 private:
     bool full = false;
    Token buffer;
 };
-
-extern TokenStream ts;
